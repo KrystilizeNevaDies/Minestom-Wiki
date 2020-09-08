@@ -51,6 +51,8 @@ public class TestGenerator implements ChunkGenerator {
 
 We have ChunkGenerator#generateChunkData which is called once for all chunk, the batch is then executed and the chunk packet sent to all nearby players.
 
+==== Populators ====
+
 Populators can also be specified, they are executed after the chunk generator as a way to "populate" the world (trees, structures, etc...)
 
 Example of a tree populator:
@@ -183,4 +185,5 @@ public class TestGenerator implements ChunkGenerator  {
 	}
 
 
-}--------------------
+}
+--------------------

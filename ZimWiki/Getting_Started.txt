@@ -4,12 +4,11 @@ Creation-Date: 2020-09-06T22:58:25+10:00
 
 ====== Getting Started ======
 
-== Dependancies ==
+==== Dependancies ====
 
 In order to build your first server, you will need to import Minestom as a dependancy.
 
 Adding Minestom to your gradle java project is really simple, the only thing you need is to add the JitPack repository:
-
 --------------------
 repositories {
 	maven { url 'https://jitpack.io' }
@@ -20,14 +19,13 @@ repositories {
 
 And add the wanted Minestom version to your dependencies (https://jitpack.io/#Minestom/Minestom):
 Make sure to replace COMMIT_NUMBER with the Commit ID of your wanted Github Commit (Normally Latest)
-
 --------------------
 dependencies {
 	compile 'com.github.Minestom:Minestom:COMMIT_NUMBER'
 }
 --------------------
 
-Warning: Minestom needs Java 11 or newer in order to run
+== NOTE: Minestom needs Java 11 or newer in order to run ==
 
 
 
@@ -39,7 +37,6 @@ Some things are needed before being able to connect to your Minestom server.
 3. Start the server at the specified port and address
 
 Here is a correct example:
-
 --------------------
 	public static void main(String[] args) {
 		 // Initialize the server (Must be called once at start of project)
@@ -55,6 +52,8 @@ Here is a correct example:
 However even after those steps, you will not be able to connect, what we miss here is an instance (the world)
 
 Please check the instances and events pages if you have any question of how to create/listen to one
+
+==== Example ====
 
 Here is an example of a working Minestom server
 
