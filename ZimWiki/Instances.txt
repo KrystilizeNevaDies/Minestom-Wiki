@@ -4,9 +4,9 @@ Creation-Date: 2020-09-06T23:36:14+10:00
 
 ====== Instances ======
 
-Instances are what replace "worlds" from Minecraft vanilla. Instances are lightweight and should offer similar properties
+Instances are the Minestom equivalent of "worlds" from Minecraft vanilla. Instances are lightweight and should offer similar functionality.
 
-They can be accessed by using the InstanceManager or by getting an entity instance
+They can be accessed by using the InstanceManager or by getting an entity's instance
 
 --------------------
 InstanceManager instanceManager = MinecraftServer.getInstanceManager()
@@ -29,7 +29,7 @@ And a SharedInstance using:
 SharedInstance sharedInstance = instanceManager.createSharedInstance(instanceContainer);
 --------------------
 
-Instances do need to have a ChunkGenerator specified, without it no chunk can be generated.
+Instances do need to have a ChunkGenerator specified, without it no chunks can be generated.
 
 --------------------
 instance.setChunkGenerator(YOUR_GENERATOR);

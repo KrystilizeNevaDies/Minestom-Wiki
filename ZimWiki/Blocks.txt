@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-08T19:09:41+10:00
+
+====== Blocks ======
+
+Blocks are very different in Minestom compared to other server types.
+By default all blocks are classed as a "VanillaBlock". This means that they are purely visual and have no logic.
+For example a chest would not be able to open and slime blocks would not bounce entities. 
+
+In order to add functionality to a block (for example chests containing items inside them), you need to make a CustomBlock Class in order to implement that.
+
+In order to create your own CustomBlock you need to create a class extending CustomBlock, implement all of its abstract methods and finally register it using the BlockManager.
+--------------------
+BlockManager blockManager = MinecraftServer.getBlockManager();
+blockManager.registerCustomBlock(YOUR_CUSTOMBLOCK_CONSTRUCTOR);
+--------------------
+
+Some things to point out are the CustomBlock#getCustomBlockId which should return a UNIQUE id independent from the vanilla block id and should never be changed after having chunks saved since it could lead to corruption. So you will need to plan out your server's blocks well from the get go if you are designing production software.
+
+There is also a special CustomBlock#getBreakDelay which can be used to customize the breaking time of any custom block, can be disabled when < 0
+

@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-08T19:30:29+10:00
+
+====== Block Batches ======
+
+When manipulating a lot of blocks, it is wiser to make use of a Batch to update all the chunks at once. There exist two kinds of Batch, the BlockBatch, and the ChunkBatch.
+
+The BlockBatch is used to modify blocks at multiple different chunks.
+
+In contrary, the ChunkBatch is used to modify a single chunk only (like for chunk generation)
+--------------------
+// Create a BlockBatch
+BlockBatch blockBatch = instance.createBlockBatch();
+
+// Create a ChunkBatch
+ChunkBatch chunkBatch = instance.createChunkBatch(THE_CHUNK_TO_MODIFY);
+--------------------
